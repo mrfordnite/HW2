@@ -10,7 +10,7 @@ int main()
     cout << "What would you like to do on break?" << endl <<
          "1. Sleep" << endl <<
          "2. Play video games" << endl <<
-         "3. Do something productive (ex. Homework, Chores, etc.)" << endl <<
+         "3. Do something productive" << endl <<
          "4. Workout" << endl <<
          "5. Go outside and see the sun" << endl;
 
@@ -85,7 +85,28 @@ int main()
 
 
         case '3':
-            cout << "Go get shit done!" << endl; break;
+        {
+            cout << "What would you like to get done?" << endl
+            <<      "1. Homework / Studying" << endl
+            <<      "2. Chores" << endl
+            <<      "3. Start a new project" << endl
+            <<      "4. Organize" << endl;
+            int productiveInput;
+            cin >> productiveInput;
+
+            switch(productiveInput)
+            {
+                case 1:
+                    cout << "Don't forget to take some brain breaks!" << endl; break;
+                case 2:
+                    cout << "Good choice! Get caught up on some chores." << endl; break;
+                case 3:
+                    cout << "A good project always tends to stir up aspiration. Go for it!" << endl; break;
+                case 4:
+                    cout << "Sometimes some good organization is good for the mind. Go crazy with that label maker!" << endl; break;
+            }
+            break;
+        }
         case '4':
             cout << "Hit the grind!" << endl; break;
         case '5':
