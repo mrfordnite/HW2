@@ -6,20 +6,20 @@ using namespace std;
 int main()
 {
     char input;
-//Print out the main menu
+    //Print out the main menu
     cout << "What would you like to do on break?" << endl <<
          "1. Sleep" << endl <<
          "2. Play video games" << endl <<
          "3. Do something productive" << endl <<
-         "4. Workout" << endl <<
+         "4. Go to the drive thru" << endl <<
          "5. Go outside and see the sun" << endl;
 
+    // Get user input and perform equivalency logic on input
     cin >> input;
-
-
     switch(input)
     {
 
+        //Case for sleep selection
         case '1':{
             cout << "How many hours do you plan on sleeping?" << endl;
             int sleepInput;
@@ -41,7 +41,7 @@ int main()
                 cout << "Holy cow! That's a lot of sleep! Goodnight Rip Van Winkle!" << endl;
             } break;
         }
-
+        //Case for Video Games selection
         case '2': {
             cout << "What would you like to play?" << endl
                  << "1. Call of Duty" << endl
@@ -78,12 +78,12 @@ int main()
                             cout << "I have selected Pong! What a great classic! You can find this game on online game websites. Go have fun!" << endl; break;
                         default:
                             cout << "Error" << endl; break;
-                    }
+                                }
                 }
+                default: cout << "Looks like you'll be cleaning house!" << endl;
             } break;
         }
-
-
+        //Case for productivity selection
         case '3':
         {
             cout << "What would you like to get done?" << endl
@@ -97,30 +97,50 @@ int main()
             switch(productiveInput)
             {
                 case 1:
-                    cout << "Don't forget to take some brain breaks!" << endl; break;
+                    cout << "You've chosen to do homework. Don't forget to take some brain breaks!" << endl; break;
                 case 2:
                     cout << "Good choice! Get caught up on some chores." << endl; break;
                 case 3:
                     cout << "A good project always tends to stir up aspiration. Go for it!" << endl; break;
                 case 4:
                     cout << "Sometimes some good organization is good for the mind. Go crazy with that label maker!" << endl; break;
+                default:
+                    cout << "Look's like you'll be cleaning house!" << endl;
             }
             break;
         }
-        case '4':
-            cout << "Hit the grind!" << endl; break;
-        case '5':
-            cout << "Wear sunblock!" << endl; break;
+        //Case for drive thru selection
+        case '4': {
+
+            cout << "How many adult meals will you be buying?" << endl;
+            int foodInput; cin >> foodInput;
+            float foodOutput = foodInput * 6.95;
+
+            cout << "Your drive thru total will be: $" << fixed << setprecision(2) << foodOutput << endl;
+
+            break;
+        }
+        //Case for outside selection
+        case '5': {
+            cout << "How cold is it outside? (Degrees F, integer)" << endl;
+            int outsideInput;
+            cin >> outsideInput;
+
+            if (outsideInput < 50) {
+                cout << "You've selected to go outside. It's a little chilly! Better bring a coat!" << endl;
+            } else if (outsideInput < 75) {
+                cout << "You've selected to go outside. It's a beautiful day for it!" << endl;
+            } else {
+                cout << "You've selected to go outside. It's hot! Better bring some water." << endl;
+            }
+
+            break;
+        }
+        //Case for invalid input
         default:
-            cout << "Try again! You did something wrong!" << endl; break;
+            cout << "Look's like you'll be cleaning the house!" << endl; break;
 
     }
-    cout << "The program is finished running! Have a good day!" << endl;
 
     return 0;
-
-
-
-
-
 }
