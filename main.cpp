@@ -77,9 +77,9 @@ int main()
                         case 4:
                             cout << "I have selected Pong! What a great classic! You can find this game on online game websites. Go have fun!" << endl; break;
                         default:
-                            cout << "Error" << endl; break;
+                            cout << "Looks like you'll be cleaning house!" << endl; break;
                                 }
-                }
+                } break;
                 default: cout << "Looks like you'll be cleaning house!" << endl;
             } break;
         }
